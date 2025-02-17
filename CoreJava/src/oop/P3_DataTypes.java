@@ -33,52 +33,53 @@ Non-primitive data types are more complex and store references rather than actua
 
 ### A. Strings
 A sequence of characters enclosed in double quotes (`" "`).
-```java
+
 String name = "Java Programming";
-```
+
 
 ### B. Arrays
 A collection of elements of the same data type.
-```java
+
 int[] numbers = {10, 20, 30, 40};
-```
+
 
 ### C. Classes
 Classes define user-defined data types.
-```java
+
 class Person {
     String name;
     int age;
 }
-```
+
 
 ### D. Interfaces
 Interfaces define abstract behavior for classes to implement.
-```java
+
 interface Animal {
     void makeSound();
 }
-```
+
 
 ### E. Enums
 A special data type to define a fixed set of constants.
-```java
+
 enum Days { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY }
-```
+
 
 ---
 ## Key Differences Between Primitive and Non-Primitive Data Types
 
-| Feature | Primitive Data Type | Non-Primitive Data Type |
-|---------|---------------------|-------------------------|
-| Stored In | Stack Memory | Heap Memory (reference stored in Stack) |
-| Value Type | Stores actual values | Stores memory references |
-| Predefined | Yes, defined by Java | No, created by users (except `String`) |
+| Feature    | Primitive Data Type  | Non-Primitive Data Type                 |
+|------------|----------------------|-----------------------------------------|
+| Stored In  | Stack Memory         | Heap Memory (reference stored in Stack) |
+| Value Type | Stores actual values | Stores memory references                |
+| Predefined | Yes, defined by Java | No, created by users (except `String`)  |
 | Operations | Supports arithmetic and logical operations | Requires method-based manipulations |
 
 ---
 ## Conclusion
-Java provides a rich set of data types to handle different types of data efficiently. Understanding these types is crucial for writing efficient and error-free Java programs.
+Java provides a rich set of data types to handle different types of data efficiently. 
+Understanding these types is crucial for writing efficient and error-free Java programs.
 
 
 */
@@ -94,6 +95,15 @@ public class P3_DataTypes {
 			double d = 3.141592653589793;
 			char c = 'A';
 			boolean bool = true;
+			
+			System.out.println("Byte Datatype Min Value : "+Byte.MIN_VALUE+" Max Value : "+Byte.MAX_VALUE+" Size in bit : "+Byte.SIZE+" Size in byte : "+Byte.BYTES);
+			System.out.println("Short Datatype Min Value : "+Short.MIN_VALUE+" Max Value : "+Short.MAX_VALUE+" Size in bit : "+Short.SIZE+" Size in byte : "+Short.BYTES);
+			System.out.println("Integer Datatype Min Value : "+Integer.MIN_VALUE+" Max Value : "+Integer.MAX_VALUE+" Size in bit : "+Integer.SIZE+" Size in byte : "+Integer.BYTES);
+			System.out.println("Long Datatype Min Value : "+Long.MIN_VALUE+" Max Value : "+Long.MAX_VALUE+" Size in bit : "+Long.SIZE+" Size in byte : "+Long.BYTES);
+			System.out.println("Float Datatype Min Value : "+Float.MIN_VALUE+" Max Value : "+Float.MAX_VALUE+" Size in bit : "+Float.SIZE+" Size in byte : "+Float.BYTES);
+			System.out.println("Double Datatype Min Value : "+Double.MIN_VALUE+" Max Value : "+Double.MAX_VALUE+" Size in bit : "+Double.SIZE+" Size in byte : "+Double.BYTES);
+			System.out.println("Character Datatype Min Value : "+" Max Value : "+" Size in bit : "+Character.SIZE+" Size in byte : "+Character.BYTES);
+			
 
 	}
 

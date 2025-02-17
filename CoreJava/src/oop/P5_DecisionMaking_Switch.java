@@ -3,13 +3,17 @@ import java.util.Scanner;
 
 public class P5_DecisionMaking_Switch {
 /*
- * The switch statement in Java is used to execute one block of code among many options.
- * It is an alternative to a long chain of if-else-if statements and provides better readability.
- *
- * In Java 12, switch expressions were introduced as a preview feature, and they were finalized in Java 14.
- * Java 21 enhances switch with pattern matching, allowing more flexible and readable code.
- *
- * Key Features of Modern Switch (Java 14+ and Java 21 improvements):
+The switch statement in Java is used to execute one block of code among many options.
+It is an alternative to a long chain of if-else-if statements and provides better readability.
+
+### Switch Requires Fixed, Discrete Values
+switch case works with integral types (byte, short, char, int, String, enum) because these values are fixed and exact.
+float and double values are not fixed due to their binary representation, making them unreliable for equality checks.
+
+In Java 12, switch expressions were introduced as a preview feature, and they were finalized in Java 14.
+Java 21 enhances switch with pattern matching, allowing more flexible and readable code.
+
+Key Features of Modern Switch (Java 14+ and Java 21 improvements):
  * - Arrow syntax for concise expressions (no need for break statements)
  * - Switch as an expression returning values
  * - Pattern matching (Java 21) allowing type checks within case labels
