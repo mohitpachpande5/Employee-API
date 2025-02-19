@@ -104,6 +104,14 @@ public class P3_DataTypes {
 			System.out.println("Double Datatype Min Value : "+Double.MIN_VALUE+" Max Value : "+Double.MAX_VALUE+" Size in bit : "+Double.SIZE+" Size in byte : "+Double.BYTES);
 			System.out.println("Character Datatype Min Value : "+" Max Value : "+" Size in bit : "+Character.SIZE+" Size in byte : "+Character.BYTES);
 			
+			System.out.println("Boolean TRUE value: " + Boolean.TRUE);
+			System.out.println("Boolean FALSE value: " + Boolean.FALSE);
+			System.out.println("Boolean Type: " + Boolean.TYPE);
+			System.out.println("Parse 'true' as Boolean: " + Boolean.parseBoolean("true"));
+			System.out.println("Parse 'false' as Boolean: " + Boolean.parseBoolean("false"));
+			System.out.println("Convert 'TRUE' String to Boolean Object: " + Boolean.valueOf("TRUE"));
+			System.out.println("Convert 'False' String to Boolean Object: " + Boolean.valueOf("False"));
+
 
 	}
 

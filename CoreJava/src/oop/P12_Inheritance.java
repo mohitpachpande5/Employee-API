@@ -63,13 +63,13 @@ that both inherit from a common superclass. If both parents override the same me
 Java wouldn't know which version to use in the subclass, creating a conflict.  
 
 #### Example Structure of the Diamond Problem  
-```
+
     A
    / \
   B   C
    \ /
     D
-```
+
 - `B` and `C` inherit from `A` and override a method.
 - `D` inherits from both `B` and `C`, leading to ambiguity: Which method from `B` or `C` should `D` inherit?  
 
@@ -115,7 +115,144 @@ where a child class inherits from two parent classes that have the same method.
 - Use Case: Supports multiple inheritance via interfaces.  
 
 ---
- 
+
+
+# Real-World Use Cases of Inheritance (IS-A Relationship)  
+
+| Use Case                     | Description | Why Use Inheritance? |
+|------------------------------|----------------|----------------------------|
+| Banking System               | `BankAccount` is the parent class with common methods like `deposit()`, `withdraw()`, and `getBalance()`, while `SavingsAccount` and `CurrentAccount` extend it. | To reuse common behavior across different account types. |
+| Employee Management System   | `Employee` is a parent class with attributes like `name`, `salary`, and `designation`, while `Manager` and `Developer` extend it with additional functionalities. | To avoid redundant code and promote reusability. |
+| Vehicle System               | `Vehicle` is a parent class with methods like `startEngine()`, `stopEngine()`, and `move()`, while `Car` and `Bike` inherit and implement specific details. | To define common vehicle behavior and ensure consistency. |
+| E-commerce System            | `Product` is a base class, and `Electronics`, `Clothing`, and `Books` are subclasses with specific properties like `warranty`, `size`, or `author`. | To provide a general structure while allowing specialization. |
+| Gaming System                | `GameCharacter` is a parent class, while `Warrior` and `Mage` inherit it and provide unique abilities. | To ensure all characters share common attributes but have different skills. |
+| UI Component System          | `UIComponent` is a parent class with methods like `render()` and `onClick()`, while `Button`, `TextBox`, and `Checkbox` extend it. | To maintain a uniform design and behavior for UI elements. |
+
+---
+
+---
+
+# super Keyword in Java  
+
+## What is `super` Keyword?  
+The `super` keyword in Java is a reference variable used to refer to the immediate parent class object. 
+It is primarily used in inheritance to access the parent class's methods, constructors, or variables.  
+
+---
+
+## Purpose of `super` Keyword  
+
+| Usage                          | Description                            |
+|--------------------------------|----------------------------------------|
+| Access Parent Class Methods    | Calls the parent class's method when overridden in the child class. |
+| Access Parent Class Variables  | Refers to the parent class's instance variables if they are hidden by child class variables. |
+| Invoke Parent Class Constructor| Calls the parent class's constructor from the child class. |
+
+---
+
+## Types of `super` Keyword Usage  
+
+### 1. Accessing Parent Class Methods  
+- When a method is overridden in a subclass, `super` can be used to call the parent class method explicitly.  
+
+Syntax:  
+
+super.methodName();
+
+
+---
+
+### 2. Accessing Parent Class Variables  
+- If a subclass declares a variable with the same name as in the parent class, `super` can be used to differentiate between them.  
+
+Syntax:  
+
+super.variableName;
+
+
+---
+
+### 3. Calling Parent Class Constructor  
+- `super()` is used to invoke the constructor of the parent class from the subclass constructor.  
+- It must be the first statement in the child class constructor.  
+
+Syntax:  
+
+super();
+
+or  
+
+super(parameters);
+
+
+---
+
+## Why Use `super` Instead of `this`?  
+
+| Keyword    | Purpose                                      |
+|------------|----------------------------------------------|
+| `this`     | Refers to the current class instance (variables, methods, constructor). |
+| `super`    | Refers to the parent class instance (variables, methods, constructor). |
+
+---
+
+## Where and Why Use `super`?  
+- When a child class needs to call a method from the parent class that has been overridden.  
+- When a child class has a variable name that matches the parent class variable name, and differentiation is needed.  
+- When a child class constructor must call the parent class constructor to initialize superclass properties.  
+
+
+## Conclusion  
+- `super` helps in accessing parent class members when they are overridden, hidden, or need explicit initialization.  
+- It is only applicable in inheritance and improves code clarity and reusability.  
+
+---
+
+### Method Overriding in Java  
+
+## What is Method Overriding?  
+Method Overriding occurs when a subclass provides a specific implementation of a method that is already defined in its parent class. The method in the subclass must have the same name, return type, and parameters as the method in the superclass. This is an example of runtime polymorphism in Java.  
+
+### Key Rules for Method Overriding  
+- Method name, return type, and parameters must be the same as in the parent class.  
+- The overridden method in the subclass must have the same access level or a more accessible modifier 
+  (e.g., `protected` in the parent class cannot be `private` in the child class).  
+- The method cannot be overridden if it is declared as `final`, `static`, or `private`.  
+- Overriding occurs only with instance methods, not with static methods.  
+- The subclass method should not throw a broader exception than the superclass method.  
+
+---
+
+## Why Use Method Overriding?  
+| Advantage                           | Description                                                        |
+|-------------------------------------|--------------------------------------------------------------------|
+| Achieves Runtime Polymorphism       | Allows a subclass to provide its own implementation of a method at runtime. |
+| Improves Code Maintainability       | Allows modification of behavior without changing the parent class. |
+| Provides Specific Implementation    | Allows customization of inherited methods for specific use cases. |
+| Supports Object-Oriented Principles | Helps in implementing abstraction and encapsulation in Java. |
+
+---
+
+## Real-World Use Cases of Method Overriding  
+
+| Use Case                | Description                    |
+|-------------------------|--------------------------------|
+| GUI Frameworks          | `paint()` in different UI components can be overridden to provide specific rendering. |
+| Banking Systems         | `calculateInterest()` in different account types (Savings, FixedDeposit, etc.). |
+| E-commerce Applications | `processPayment()` overridden in different payment gateways (PayPal, CreditCard, etc.). |
+| Database Connectivity   | `connectDatabase()` for different databases (MySQL, PostgreSQL, etc.). |
+| Web Frameworks          | `handleRequest()` method overridden in different controllers for API handling. |
+| Game Development        | `attack()` method overridden in different character classes (Warrior, Mage, Archer, etc.). |
+
+---
+
+## Conclusion  
+- Method Overriding allows a subclass to provide a customized version of a method defined in a superclass.  
+- It is a key feature of runtime polymorphism, enabling flexible and maintainable code.  
+- It is widely used in real-world applications such as banking, e-commerce, game development, and UI frameworks.  
+
+---
+
 */
 
 /*
