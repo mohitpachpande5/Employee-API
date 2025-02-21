@@ -260,7 +260,7 @@ Problem Statement:
 Create a Shape Calculation System where different types of shapes (Circle, Rectangle, Sphere, and Cuboid) 
 inherit from a common Shape class and override methods to calculate their area and surface area.
  */
-public class P12_Inheritance {
+public class P13_Inheritance {
 
 	public static void main(String[] args) {
 		Shape circle = new Circle(5);

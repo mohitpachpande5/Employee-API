@@ -64,7 +64,7 @@ and non-abstract methods (methods with an implementation). They can also have va
 
 */
 
-public class P14_AbstractClass {
+public class P12_AbstractClass {
 
 	public static void main(String[] args) {
 	     PressureConverter atmToKPa = new AtmToKPa(1);

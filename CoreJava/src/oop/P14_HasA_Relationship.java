@@ -83,7 +83,7 @@ class ClassA {
  Design a system where a BankAccount has an InterestCalculator. The InterestCalculator calculates 
  interest based on the type of account (Savings or Fixed Deposit) and the principal amount.
  */
-public class P13_HasA_Relationship {
+public class P14_HasA_Relationship {
 
 	public static void main(String[] args) {
 	     // Creating interest calculator for Savings Account (5% interest)

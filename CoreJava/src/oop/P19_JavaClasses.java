@@ -119,8 +119,136 @@ Java supports different types of classes, each serving a unique purpose.
 public class P19_JavaClasses {
 
 	public static void main(String[] args) {
+		System.out.println("=== Java Class Demonstration ===");
+
+	     // Final Class Demonstration
+	     FinalExample finalObj = new FinalExample();
+	     finalObj.show();
+
+	     // Static Class Demonstration
+	     StaticExample.StaticInner.display();
+
+	     //  Inner Class Demonstration
+	     InnerExample innerExample = new InnerExample();
+	     InnerExample.Inner inner = innerExample.new Inner();
+	     inner.show();
+
+	     // Anonymous Class Demonstration
+	     AnonymousExample anonymousExample = new AnonymousExample();
+	     anonymousExample.display();
+
+	     // POJO Class Demonstration
+	     PojoExample pojo = new PojoExample("John", 25);
+	     System.out.println("\nPOJO Example: Name - " + pojo.getName() + ", Age - " + pojo.getAge());
+
+	     // Bean Class Demonstration
+	     BeanExample bean = new BeanExample();
+	     bean.setName("Alice");
+	     bean.setAge(30);
+	     System.out.println("\nBean Example: Name - " + bean.getName() + ", Age - " + bean.getAge());
+
+	     //  Record Class Demonstration
+	     RecordExample recordExample = new RecordExample("Bob", 40);
+	     System.out.println("\nRecord Example: " + recordExample);
+
+	     // Local Class Demonstration
+	     LocalClassExample localClassExample = new LocalClassExample();
+	     localClassExample.showLocalClass();
 		
 
 	}
 
+}
+
+
+
+//Final Class (Cannot be Inherited)
+final class FinalExample {
+ void show() {
+     System.out.println("\nFinal Class: This class cannot be extended.");
+ }
+}
+
+// Static Class (Nested Class with Static Modifier)
+class StaticExample {
+ static class StaticInner {
+     static void display() {
+         System.out.println("\nStatic Inner Class: Called without creating an object.");
+     }
+ }
+}
+
+// Inner Class (Non-Static Nested Class)
+class InnerExample {
+ class Inner {
+     void show() {
+         System.out.println("\nInner Class: Accessed through an instance of the outer class.");
+     }
+ }
+}
+
+//Anonymous Class (Class without a Name, Implementing an Interface)
+interface AnonymousInterface {
+ void display();
+}
+
+class AnonymousExample {
+ void display() {
+     AnonymousInterface obj = new AnonymousInterface() {
+         @Override
+         public void display() {
+             System.out.println("\nAnonymous Class: Implementing an interface without naming a class.");
+         }
+     };
+     obj.display();
+ }
+}
+
+//POJO Class (Plain Old Java Object - Simple Data Class)
+class PojoExample {
+ private String name;
+ private int age;
+
+ public PojoExample(String name, int age) {
+     this.name = name;
+     this.age = age;
+ }
+
+ public String getName() {
+     return name;
+ }
+
+ public int getAge() {
+     return age;
+ }
+}
+
+//Bean Class (Same as POJO but with a No-Arg Constructor, Getters, and Setters)
+class BeanExample {
+ private String name;
+ private int age;
+
+ public BeanExample() {} // No-argument constructor
+
+ public String getName() { return name; }
+ public void setName(String name) { this.name = name; }
+
+ public int getAge() { return age; }
+ public void setAge(int age) { this.age = age; }
+}
+
+//Record Class (Immutable Data Class in Java 14+)
+record RecordExample(String name, int age) {}
+
+//Local Class (Defined Inside a Method)
+class LocalClassExample {
+ void showLocalClass() {
+     class Local {
+         void display() {
+             System.out.println("\nLocal Class: Defined inside a method.");
+         }
+     }
+     Local localObj = new Local();
+     localObj.display();
+ }
 }
