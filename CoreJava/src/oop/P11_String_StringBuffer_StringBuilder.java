@@ -47,6 +47,12 @@ making it faster for single-threaded applications.
 - Use `StringBuilder` if you need better performance in a single-threaded environment.  
 
 ---
+### What is hashCode() Method?
+- hashCode() is a method from Object class that returns an integer representation (hash value) of an object.
+  Used in hash-based collections (HashMap, HashSet).
+- Enables efficient searching and storage.Used with equals() to compare objects.
+- If two objects are equal (equals() returns true), then their hashCode() must be the same.
+- If hashCode() values are different, objects must be different.
 */
 
 public class P11_String_StringBuffer_StringBuilder {

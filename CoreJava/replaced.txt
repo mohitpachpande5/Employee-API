@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+// Converter class (performs time conversions)
+class Converter {
+    public String convertSeconds(int totalSeconds) {
+        int hours = totalSeconds / 3600;
+        int minutes = (totalSeconds % 3600) / 60;
+        int seconds = totalSeconds % 60;
+        return hours + "h " + minutes + "m " + seconds + "s";
+    }
+}
+
+// Time class (HAS-A Converter)
+class Time {
+    private int seconds;
+    private Converter converter; // Composition
+
+    public Time(int seconds) {
+        this.seconds = seconds;
+        this.converter = new Converter();
+    }
+
+    public void displayTime() {
+        System.out.println("Time: " + converter.convertSeconds(seconds));
+    }
+}
+
+public class TimeConversion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter time in seconds: ");
+        int sec = sc.nextInt();
+
+        Time time = new Time(sec);
+        time.displayTime();
+        sc.close();
+    }
+}

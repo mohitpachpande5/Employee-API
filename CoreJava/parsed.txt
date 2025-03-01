@@ -1,0 +1,6 @@
+[| Use Case | Why Java NIO? |]
+[|-------------|----------------|]
+[| High-Performance File Handling | Memory-mapped files improve speed |]
+[| Non-Blocking Network Servers | Selectors manage multiple connections in one thread |]
+[| Data Streaming Applications | Buffer-oriented I/O provides efficient data handling |]
+[| Real-Time Data Processing | Reduces latency by using direct buffers |]
