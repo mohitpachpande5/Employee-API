@@ -18,8 +18,8 @@ Welcome to the **Full-Stack Java Tutorial** repository! This repository contains
 | 4  | Advanced Java Practicals      | [View](#)                                                                                  |
 | 5  | Hibernate Framework           | [View](#)                                                                                  |
 | 6  | Spring Boot Framework         | [View](#)                                                                                  |
-| 7  | Frontend - HTML, CSS, JS      | [View](#)                                                                                  |
-| 8  | Angular Framework             | [View](#)                                                                                  |
+| 7  | Frontend - HTML, CSS, JS ,Typescript      | [View](https://github.com/anirudhagaikwad/JavaFullStack/tree/main/Frontend)(#)                                                                                  |
+| 8  | Angular Framework             | [View](https://github.com/anirudhagaikwad/JavaFullStack/tree/main/Frontend/Angular)                                                                                 |
 
 ## 🚀 How to Use
 1. Clone the repository:
