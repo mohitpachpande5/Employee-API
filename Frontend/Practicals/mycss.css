@@ -1,0 +1,105 @@
+/* Element Selector */
+h1{
+    color: red;
+    font-size: 20px;
+    background-color: yellow;
+}
+
+/* Class Selector */
+.myclass{
+    color: blue;
+    font-size: 20px;
+    background-color: green;
+}
+
+/* ID Selector */
+#myid{
+    color: rgb(122, 122, 105);
+    font-size: 20px;
+    background-color: #ebe305;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;    
+    padding-bottom: 10px;
+    background-image: linear-gradient(to right, #54e34198, #e78e8e);
+    background-position: 50% 55%;
+}
+
+#border{
+    border-width: 5px;
+    border-color: red;
+    padding: 10px 10px 10px 10px;
+    margin: 10px;
+    border-style: double;
+}
+.text-style{
+    color: #000;
+    font-size: 20px;
+    background-color: #e9d208;
+    direction: ltr;
+    text-align: center;
+    text-decoration: wavy;
+    letter-spacing: 2px;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+nav {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+footer {
+    background-image: radial-gradient(circle, #df1515, #e8e3e16b);
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: #f4f4f4;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: #ca7a7a;
+    }
+    
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+    body {
+        background-color: #7aca7a;
+    }
+}
+
+@media(prefers-color-scheme: dark){
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+}
+.btn{
+    display: inline-block;
+    background-image: conic-gradient(#ff0000, #00ff00, #0000ff);
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}

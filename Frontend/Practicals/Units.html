@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Example</title>
+    <style>
+        body {
+            font-size: 16px; /* Base font size for rem & em */
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* Absolute Units */
+        .px-box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        
+        /* Relative Units - Font-based */
+        .em-box {
+            font-size: 2em; /* 2 times the parent font-size */
+            padding: 1em;
+            background: orange;
+        }
+        .rem-box {
+            font-size: 2rem; /* 2 times root font-size (32px) */
+            padding: 1rem;
+            background: yellow;
+        }
+        
+        /* Percentage */
+        .percent-box {
+            width: 50%; /* 50% of the parent container */
+            background: lightgreen;
+        }
+        
+        /* Viewport Units */
+        .vw-box {
+            width: 50vw; /* 50% of the viewport width */
+            height: 10vh; /* 10% of the viewport height */
+            background: lightblue;
+        }
+        
+        /* Grid with fr */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* 1:2 ratio */
+            gap: 10px;
+        }
+        .grid-item {
+            background: pink;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Miscellaneous Units */
+        .ch-box {
+            width: 10ch; /* Width of 10 characters */
+            background: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Units Example</h1>
+    <div class="px-box">100px Box</div>
+    <div class="em-box">2em Box (relative to parent)</div>
+    <div class="rem-box">2rem Box (relative to root)</div>
+    <div class="percent-box">50% Width Box</div>
+    <div class="vw-box">50vw Width, 10vh Height</div>
+    
+    <h2>CSS Grid using fr</h2>
+    <div class="grid-container">
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">2fr</div>
+    </div>
+    
+    <h2>Character Width Example</h2>
+    <div class="ch-box">10ch Wide</div>
+</body>
+</html>
