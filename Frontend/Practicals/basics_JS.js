@@ -1,16 +1,61 @@
-// Introduction to JavaScript
-console.log("Hello, JavaScript!");
+/*
+===========================================
+          JavaScript Fundamentals
+===========================================
+*/
 
-// Variables in JavaScript
-let name = "Anirudha"; // let allows reassignment
-const age = 25; // const prevents reassignment
-var city = "Mumbai"; // var (old way, avoid using)
+// =============================
+// Types of Variables in JavaScript
+// =============================
 
-// Statements, Operators, Comments, Expressions, and Control Structures
-// Statements: Individual instructions in JavaScript
-let a = 15;
-let b = 7;
-let result;
+// Using var (Old way, function-scoped)
+var x = 10;
+console.log("var x:", x);
+
+// 1.2 Using let (Block-scoped, preferred for reassignment)
+let y = 20;
+y = 25; // Allowed
+console.log("let y:", y);
+
+// 1.3 Using const (Block-scoped, cannot be reassigned)
+const z = 30;
+// z = 35; // Error: Assignment to constant variable
+console.log("const z:", z);
+
+// =============================
+// Literals in JavaScript
+// =============================
+
+// Numeric Literal
+let numLiteral = 100;
+
+// String Literal
+let strLiteral = "Hello, JavaScript!";
+
+// Boolean Literal
+let boolLiteral = true;
+
+// Array Literal
+let arrLiteral = [1, 2, 3, 4];
+
+// Object Literal
+let objLiteral = { name: "Anirudha", age: 25 };
+
+console.log(numLiteral, strLiteral, boolLiteral, arrLiteral, objLiteral);
+
+// =============================
+// Data Types in JavaScript
+// =============================
+
+let str = "JavaScript"; // String
+let num = 42; // Number
+let bool = false; // Boolean
+let arr = [10, 20, 30]; // Array (object type)
+let obj = { key: "value" }; // Object
+let undef; // Undefined
+let nullable = null; // Null
+
+console.log(typeof str, typeof num, typeof bool, typeof arr, typeof obj, typeof undef, typeof nullable);
 
 // Operators: Used to perform operations on variables and values
 result = a + b; // Addition operator
@@ -33,63 +78,56 @@ console.log("Modulus:", result);
 /* This is a 
    multi-line comment */
 
-// Expressions: Combinations of values, variables, and operators
-let expressionResult = (a * 2) + (b / 2);
-console.log("Expression Result:", expressionResult);
-
-// Control Structures
-if (a > b) {
-    console.log("a is greater than b");
-} else if (a === b) {
-    console.log("a and b are equal");
+// Decision Making and Control Statements
+let num = 10;
+if (num > 0) {
+    console.log("Number is positive");
+} else if (num < 0) {
+    console.log("Number is negative");
 } else {
-    console.log("b is greater than a");
+    console.log("Number is zero");
 }
 
-// Loop: For loop example
+// Switch Case
+let day = "Monday";
+switch (day) {
+    case "Monday":
+        console.log("Start of the week");
+        break;
+    case "Friday":
+        console.log("End of the work week");
+        break;
+    default:
+        console.log("Another day");
+}
+
+// Loops
+// For Loop
 for (let i = 0; i < 5; i++) {
     console.log("Iteration:", i);
 }
 
-// JavaScript Scopes
-function testScope() {
-    let localVar = "I'm local";
-    console.log(localVar);
+// While Loop
+let count = 0;
+while (count < 3) {
+    console.log("Count:", count);
+    count++;
 }
-testScope();
-// console.log(localVar); // Uncaught ReferenceError: localVar is not defined
 
-// Strings, String Methods
-let text = "JavaScript is awesome!";
-console.log(text.toUpperCase()); // Convert to uppercase
-console.log(text.replace("awesome", "powerful"));
+// Do-While Loop
+do {
+    console.log("This will execute at least once");
+} while (false);
 
-// Numbers, Number Methods
-let num = 42.567;
-console.log(num.toFixed(2)); // Round to 2 decimal places
-console.log(Number.isInteger(num)); // Check if integer
 
-// Boolean Values
-let isJavaScriptFun = true;
-console.log(isJavaScriptFun);
+// =============================
+// Functions with Parameters & Return Type
+// =============================
 
-// Dates, Date Formats, Date Methods
-let today = new Date();
-console.log(today.toDateString()); // Get human-readable date
-console.log(today.getFullYear()); // Get current year
-
-// Arrays, Array Methods
-let fruits = ["Apple", "Banana", "Cherry"];
-fruits.push("Orange"); // Add item to array
-console.log(fruits);
-console.log(fruits.indexOf("Banana")); // Find index of an item
-
-// Lab: Practice writing basic JavaScript programs
-// Task: Write a program to calculate the square of a number
-function square(num) {
-    return num * num;
+function multiply(a, b) {
+    return a * b;
 }
-console.log("Square of 5:", square(5));
+console.log("Multiplication:", multiply(5, 6));
 
 var text = " JavaScript is awesome! ";
 console.log(text.length); // Get string length
@@ -139,65 +177,39 @@ console.log("Converted Date:", convertedDate);
 let formattedDate = today.toISOString().split("T")[0];
 console.log("Formatted Date:", formattedDate);
 
-// Arrays, Array Methods
-let fruits = ["Apple", "Banana", "Cherry"];
-fruits.push("Orange"); // Add item to array
-console.log(fruits);
-console.log(fruits.indexOf("Banana")); // Find index of an item
+// =============================
+// Date Formats
+// =============================
 
-// Creating Objects in JavaScript
+console.log(new Date().toISOString()); // ISO Format
+// Indian Date Format (DD/MM/YYYY)
+console.log(new Date().toLocaleDateString("en-IN")); // Indian Format
+console.log(new Date().toLocaleDateString("en-US")); // US Format
+console.log(new Date().toLocaleDateString("en-GB")); // UK Format
+// Custom Date Format (DD/MM/YYYY)
+let customDate = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+console.log(customDate);
 
-// Using Object Literal
-let person = {
-    firstName: "Anirudha",
-    lastName: "Gaikwad",
-    age: 25,
-    city: "Mumbai"
-};
-console.log(person);
+// =============================
+// Array Manipulation & Built-in Methods
+// =============================
 
-// Using Constructor Function
-function Car(brand, model, year) {
-    this.brand = brand;
-    this.model = model;
-    this.year = year;
-}
-let myCar = new Car("Toyota", "Camry", 2022);
-console.log(myCar);
+let numbers = [1, 2, 3, 4, 5];
+numbers.push(6); // Add at end
+console.log(numbers);
+numbers.pop(); // Remove last element
+console.log(numbers);
+numbers.unshift(0); // Add at beginning
+console.log(numbers);
+numbers.shift(); // Remove first element
+console.log(numbers);
+console.log(numbers.concat([7, 8])); // Merge arrays
+console.log(numbers.slice(1, 4)); // Extract sub-array
+console.log(numbers.map(num => num * 2)); // Transform array
+console.log(numbers.filter(num => num % 2 === 0)); // Filter even numbers
+console.log(numbers.find(num => num > 2)); // Find first match
 
-// Using Class Syntax (ES6)
-class Animal {
-    constructor(name, type) {
-        this.name = name;
-        this.type = type;
-    }
-}
-let dog = new Animal("Buddy", "Dog");
-console.log(dog);
 
-// What is DOM?
-// The Document Object Model (DOM) represents the structure of an HTML document in a tree-like format, allowing JavaScript to manipulate web pages dynamically.
 
-// Types of DOM:
-// 1. Core DOM: Standard model for all document types.
-// 2. HTML DOM: Specific for HTML documents.
-// 3. XML DOM: Used for XML documents.
 
-// Example of DOM Manipulation
-// Changing text content using JavaScript
-// Assuming an HTML file with: <p id="demo">Hello World</p>
-document.getElementById("demo").innerText = "Hello JavaScript!";
 
-// Writing a Method with Parameters and Return Type
-function addNumbers(a, b) {
-    return a + b;
-}
-console.log("Sum:", addNumbers(5, 10));
-
-// Method inside an Object
-let calculator = {
-    multiply: function(x, y) {
-        return x * y;
-    }
-};
-console.log("Multiplication:", calculator.multiply(4, 5));
