@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <h1>Modern Responsive Web Page</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Services ▼</a>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">App Development</a></li>
+                    <li><a href="#">SEO Optimization</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Card with Form -->
+    <div class="card">
+        <h2>Sign Up</h2>
+        <form action="submit" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="flex-container">
+        <div class="text-column">
+            <h2>About Our Services</h2>
+            <p>We offer high-quality web development, mobile app creation, and digital marketing solutions. Our expert team ensures innovative solutions tailored to your business needs.</p>
+        </div>
+        <div class="image-column">
+            <img src="f1.png" alt="Our Services">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,9 +1,3 @@
-/*
-===========================================
-          JavaScript Fundamentals
-===========================================
-*/
-
 // =============================
 // Types of Variables in JavaScript
 // =============================
@@ -48,14 +42,14 @@ console.log(numLiteral, strLiteral, boolLiteral, arrLiteral, objLiteral);
 // =============================
 
 let str = "JavaScript"; // String
-let num = 42; // Number
+let num_var = 42; // Number
 let bool = false; // Boolean
 let arr = [10, 20, 30]; // Array (object type)
 let obj = { key: "value" }; // Object
 let undef; // Undefined
 let nullable = null; // Null
 
-console.log(typeof str, typeof num, typeof bool, typeof arr, typeof obj, typeof undef, typeof nullable);
+console.log(typeof str, typeof num_var, typeof bool, typeof arr, typeof obj, typeof undef, typeof nullable);
 
 // Operators: Used to perform operations on variables and values
 result = a + b; // Addition operator
@@ -140,15 +134,15 @@ console.log(text.replace("awesome", "powerful")); // Replace substring
 console.log(text.split(" ")); // Split into an array
 console.log(text.concat(" Let's learn it!")); // Concatenate strings
 
-var num = 42.567;
-console.log(num.toFixed(2)); // Round to 2 decimal places
-console.log(num.toPrecision(3)); // Format to specific length
-console.log(Number.isInteger(num)); // Check if integer
+var numb = 42.567;
+console.log(numb.toFixed(2)); // Round to 2 decimal places
+console.log(numb.toPrecision(3)); // Format to specific length
+console.log(Number.isInteger(numb)); // Check if integer
 console.log(Number.parseFloat("123.45")); // Convert string to float
 console.log(Number.parseInt("123.45")); // Convert string to integer
-console.log(Math.round(num)); // Round number
-console.log(Math.floor(num)); // Round down
-console.log(Math.ceil(num)); // Round up
+console.log(Math.round(numb)); // Round number
+console.log(Math.floor(numb)); // Round down
+console.log(Math.ceil(numb)); // Round up
 console.log(Math.random()); // Generate random number between 0 and 1
 console.log(Math.max(10, 20, 30)); // Get max value
 console.log(Math.min(10, 20, 30)); // Get min value
@@ -208,8 +202,69 @@ console.log(numbers.slice(1, 4)); // Extract sub-array
 console.log(numbers.map(num => num * 2)); // Transform array
 console.log(numbers.filter(num => num % 2 === 0)); // Filter even numbers
 console.log(numbers.find(num => num > 2)); // Find first match
+// Update element at index 2 (replace 3 with 99)
+numbers.splice(2, 1, 99);  
+// Update index 2
+numbers[2] = 199;
+console.log(numbers); 
 
+//Nested Property Object
+const company = {
+    name: "Tech India Pvt Ltd",
+    location: {
+        city: "Mumbai",
+        country: "India"
+    },
+    departments: {
+        development: {
+            teamLead: "Rajesh",
+            employees: ["Amit", "Suresh", "Vikram"]
+        },
+        marketing: {
+            teamLead: "Priya",
+            employees: ["Neha", "Anjali"]
+        }
+    },
+    getCompanyInfo() {
+        return `${this.name} is located in ${this.location.city}, ${this.location.country}.`;
+    }
+};
 
+console.log(company.getCompanyInfo()); 
+// Output: Tech India Pvt Ltd is located in Mumbai, India.
 
+console.log(company.departments.development.teamLead); 
+// Output: Rajesh
 
+// JavaScript Program to Sort a List of Elements Using a Sorting Algorithm
+function bubbleSort(arr) {
+    let len = arr.length;
+    for (let i = 0; i < len - 1; i++) {
+        for (let j = 0; j < len - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap elements
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+        }
+    }
+    return arr;
+}
 
+// Example Usage
+let numbers = [34, 7, 23, 32, 5, 62];
+console.log("Sorted Array:", bubbleSort(numbers));
+
+//JavaScript Program to List the Properties of an Object
+function listObjectProperties(obj) {
+    return Object.keys(obj);
+}
+
+// Example Object
+const student = {
+    name: "Anirudha",
+    age: 40,
+    course: "Computer Science",
+    university: "IIT Bombay"
+};
+
+console.log("Properties:", listObjectProperties(student));
