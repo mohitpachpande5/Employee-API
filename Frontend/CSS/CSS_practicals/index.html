@@ -3,60 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Web Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking external CSS -->
 </head>
 <body>
-
-    <!-- Header -->
-    <header id="main-header">
-        <h1>Modern Responsive Web Page</h1>
-    </header>
-
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li>
-                <a href="#">Services ▼</a>
+                <a href="#">Services</a>
                 <ul>
                     <li><a href="#">Web Development</a></li>
                     <li><a href="#">App Development</a></li>
-                    <li><a href="#">SEO Optimization</a></li>
                 </ul>
             </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#registration">Registration</a></li>
         </ul>
     </nav>
+    
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Our Website</h1>
+        <p>Your one-stop solution for web and app development.</p>
+    </section>
 
-    <!-- Card with Form -->
-    <div class="card">
-        <h2>Sign Up</h2>
-        <form action="submit" method="POST">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <!-- About Section with two columns -->
+    <section id="about">
+        <div class="text-content">
+            <h2>About Us</h2>
+            <p>We are a leading technology solutions provider, offering modern web and mobile applications.
+                offering modern web and mobile applications
+                offering modern web and mobile applications
+                offering modern web and mobile applications
+                offering modern web and mobile applications
+                offering modern web and mobile applications
+                offering modern web and mobile applications
+                offering modern web and mobile applications
+                offering modern web and mobile applications
+                offering modern web and mobile applications
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="f1.png" alt="About Us">
+        </div>
+    </section>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <!-- Registration Section -->
+    <section id="registration">
+        <div id="registration-card" class="card">
+            <h2>Student Registration</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="number" placeholder="Mobile Number" required>
+                <input type="text" placeholder="Course Interested" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter password" required>
-
-            <button type="submit">Register</button>
+    <!-- Contact Section with Map -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="number" placeholder="Your Phone Number" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
         </form>
-    </div>
+        <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
+    </section>
 
-    <!-- Two Column Layout -->
-    <div class="flex-container">
-        <div class="text-column">
-            <h2>About Our Services</h2>
-            <p>We offer high-quality web development, mobile app creation, and digital marketing solutions. Our expert team ensures innovative solutions tailored to your business needs.</p>
+    <!-- Footer with three columns -->
+    <footer>
+        <div class="footer-col">
+            <h3>About</h3>
+            <p>We provide high-quality services in web and mobile app development.</p>
         </div>
-        <div class="image-column">
-            <img src="f1.png" alt="Our Services">
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <p><a href="#home">Home</a> | <a href="#about">About</a> | <a href="#contact">Contact</a></p>
         </div>
-    </div>
-
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: contact@ourwebsite.com<br>Phone: +123 456 7890</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -15,7 +15,7 @@ Welcome to the **Full-Stack Java Tutorial** repository! This repository contains
 | 1  | Core Java Concepts Practicals | [View](https://github.com/anirudhagaikwad/JavaFullStack/tree/main/CoreJava/src/oop)        |
 | 2  | Core Java practice Examples   | [View](https://github.com/anirudhagaikwad/JavaFullStack/tree/main/CoreJava/src/examples)   |  
 | 3  | PostgreSQL practice Examples  | [View](https://github.com/anirudhagaikwad/PostgreSQL.git)                                  |                                                                           |
-| 4  | Advanced Java Practicals      | [View](#)                                                                                  |
+| 4  | Advanced Java Practicals      | [View](https://github.com/anirudhagaikwad/Servlet_SpringBoot)                                                                                  |
 | 5  | Hibernate Framework           | [View](#)                                                                                  |
 | 6  | Spring Boot Framework         | [View](#)                                                                                  |
 | 7  | Frontend - HTML, CSS, JS ,Typescript      | [View](https://github.com/anirudhagaikwad/JavaFullStack/tree/main/Frontend)                                                                                |
